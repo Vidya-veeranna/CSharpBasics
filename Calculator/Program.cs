@@ -9,15 +9,19 @@ Console.WriteLine("[A]dd");
 Console.WriteLine("[S]ubtract");
 Console.WriteLine("[M]ultiply");
 String userInput = Console.ReadLine();
-if (userInput == "A" || userInput == "a")
+userInput=userInput.ToUpper();
+if (userInput == "A")
 {
-    Console.WriteLine(firstNumber + " + " + secondNumber + " = " + (firstNumber + secondNumber));
-}else if(userInput == "S" || userInput == "s")
+    int result = firstNumber + secondNumber;
+    printResult(firstNumber, secondNumber, result, " + ");
+}else if(userInput == "S")
 {
-    Console.WriteLine(firstNumber + " - " + secondNumber + " = " + (firstNumber - secondNumber));
+    int result = firstNumber - secondNumber;
+    printResult(firstNumber, secondNumber, result, " - ");
 }
-else if(userInput == "M" || userInput == "m"){
-    Console.WriteLine(firstNumber + " * " + secondNumber + " = " + (firstNumber * secondNumber));
+else if(userInput == "M"){
+    int result = firstNumber * secondNumber;
+    printResult(firstNumber, secondNumber, result, " * ");
 }
 else
 {
@@ -26,3 +30,8 @@ else
 Console.WriteLine("Press any key to exit...");
 
 Console.ReadKey();
+
+void printResult(int num1, int num2, int result, String @operator)
+{
+    Console.WriteLine(num1 + @operator + num2 + " = "+ result);
+}
