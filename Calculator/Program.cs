@@ -33,5 +33,5 @@ Console.ReadKey();
 
 void printResult(int num1, int num2, int result, String @operator)
 {
-    Console.WriteLine(num1 + @operator + num2 + " = "+ result);
+    Console.WriteLine($"{num1}{@operator}{num2} = {result}");
 }
