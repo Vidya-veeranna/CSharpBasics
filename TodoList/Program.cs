@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-var todos = new List<string>();
+﻿var todos = new List<string>();
 Console.WriteLine("Hello!");
 bool shallExit = false;
 
